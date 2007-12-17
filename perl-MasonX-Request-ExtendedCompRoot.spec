@@ -10,7 +10,6 @@ URL:		http://search.cpan.org/dist/%{realname}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/MasonX/%{realname}-%{version}.tar.bz2 
 BuildRequires:	perl-HTML-Mason >= 1.24
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 "MasonX::Request::ExtendedCompRoot" lets you alter Mason's
