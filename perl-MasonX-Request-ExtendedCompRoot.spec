@@ -3,7 +3,7 @@
 Summary:	MasonX::Request::ExtendedCompRoot - Extend  functionality of Mason's component root
 Name:           perl-%{realname}
 Version:        0.03
-Release:        %mkrel 2
+Release:        %mkrel 4
 License:	GPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{realname}
