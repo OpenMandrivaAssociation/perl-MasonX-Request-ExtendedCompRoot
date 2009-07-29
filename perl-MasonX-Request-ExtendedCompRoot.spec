@@ -1,16 +1,19 @@
-%define realname MasonX-Request-ExtendedCompRoot
+%define upstream_name    MasonX-Request-ExtendedCompRoot
+%define upstream_version 0.03
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	MasonX::Request::ExtendedCompRoot - Extend  functionality of Mason's component root
-Name:           perl-%{realname}
-Version:        0.03
-Release:        %mkrel 4
 License:	GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{realname}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/MasonX/%{realname}-%{version}.tar.bz2 
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/MasonX/%{upstream_name}-%{upstream_version}.tar.bz2 
+
 BuildRequires:	perl-HTML-Mason >= 1.24
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 "MasonX::Request::ExtendedCompRoot" lets you alter Mason's
@@ -22,11 +25,9 @@ object with a different component root) or because you configure
 Mason in an httpd.conf.
 
 %prep
-
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-
 %{__perl} Makefile.PL INSTALLDIRS=vendor 
 %{__make}
 
@@ -35,7 +36,6 @@ Mason in an httpd.conf.
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %makeinstall_std
 
 %clean
@@ -47,4 +47,3 @@ Mason in an httpd.conf.
 %{perl_vendorlib}/MasonX/Request/ExtendedCompRoot.pm
 %{perl_vendorlib}/MasonX/Resolver/ExtendedCompRoot.pm
 %{_mandir}/man3/*
-
