@@ -5,7 +5,7 @@ Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
 Release:	3
 
-Summary:	MasonX::Request::ExtendedCompRoot - Extend  functionality of Mason's component root
+Summary:	Extend functionality of Mason's component root
 License:	GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
