@@ -8,7 +8,7 @@ Release:	5
 Summary:	Extend functionality of Mason's component root
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/MasonX/%{upstream_name}-%{upstream_version}.tar.bz2 
 
 BuildRequires:	perl-devel
