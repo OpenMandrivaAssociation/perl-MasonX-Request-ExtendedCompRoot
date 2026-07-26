@@ -1,15 +1,13 @@
 %define upstream_name    MasonX-Request-ExtendedCompRoot
-%define upstream_version 0.04
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.04
+Release:	2
 
 Summary:	Extend functionality of Mason's component root
 License:	GPL
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/MasonX-Request-ExtendedCompRoot
-Source0:	https://cpan.metacpan.org/authors/id/S/SG/SGP/MasonX-Request-ExtendedCompRoot-%{upstream_version}.tar.gz 
+Source0:	https://cpan.metacpan.org/authors/id/S/SG/SGP/MasonX-Request-ExtendedCompRoot-%{version}.tar.gz 
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ object with a different component root) or because you configure
 Mason in an httpd.conf.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor 
@@ -49,9 +47,7 @@ make test
 * Sat Aug 01 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.30.0-2mdv2010.0
 + Revision: 405862
 - bump mkrel to force rebuild
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.03-4mdv2009.0
+- rebuild using %0.04 Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.03-4mdv2009.0
 + Revision: 241716
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
